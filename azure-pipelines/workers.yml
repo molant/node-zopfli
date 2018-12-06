@@ -1,0 +1,30 @@
+parameters:
+  name: ''
+  vmImage: ''
+
+jobs:
+- job: ${{ parameters.name }}
+  pool:
+    vmImage: ${{ parameters.vmImage }}
+  strategy:
+    matrix:
+      node_8_x:
+        node_version: 8.x
+      node_10_x:
+        node_version: 10.x
+      node_11_x:
+        node_version: 11.x
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '2.7'
+      architecture: 'x64'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: $(node_version)
+  - script: npm install --build-from-source
+    displayName: 'Install & Build'
+  - script: npm run publish
+    displayName: 'Publish package'
+    env:
+      NODE_PRE_GYP_GITHUB_TOKEN: $(NODE_PRE_GYP_GITHUB_TOKEN)
