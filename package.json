@@ -16,23 +16,23 @@
     "gzip",
     "deflate"
   ],
-  "homepage": "https://github.com/pierreinglebert/node-zopfli",
+  "homepage": "https://github.com/molant/node-zopfli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierreinglebert/node-zopfli.git"
+    "url": "https://github.com/molant/node-zopfli.git"
   },
   "bugs": {
-    "url": "https://github.com/pierreinglebert/node-zopfli/issues"
+    "url": "https://github.com/molant/node-zopfli/issues"
   },
   "engines": {
     "node": ">=0.12"
   },
   "binary": {
-    "module_name": "zopfli",
+    "module_name": "node-zopfli",
     "module_path": "./lib/binding/{node_abi}-{platform}-{arch}",
-    "remote_path": "./{configuration}",
-    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-    "host": "https://node-zopfli.s3.amazonaws.com"
+    "host": "https://github.com/molant/node-zopfli/releases/download/",
+    "remote_path": "v{version}",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz"
   },
   "dependencies": {
     "commander": "^2.8.1",
@@ -48,6 +48,7 @@
     "eslint": "1.0.0",
     "istanbul": "^0.4.4",
     "mocha": "^2.2.4",
+    "node-pre-gyp-github": "^1.4.3",
     "randomstring": "^1.0.5"
   },
   "bin": {
