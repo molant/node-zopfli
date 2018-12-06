@@ -1,5 +1,5 @@
 {
-  "name": "node-zopfli",
+  "name": "node-zopfli2",
   "description": "Bindings for Zopfli compressing lib. Compress gzip files 5% better than gzip.",
   "version": "2.0.2",
   "author": "Pierre Inglebert <pierre.inglebert@gmail.com>",
@@ -38,18 +38,16 @@
     "commander": "^2.8.1",
     "defaults": "^1.0.2",
     "nan": "^2.0.0",
-    "node-pre-gyp": "^0.6.4",
+    "node-pre-gyp": "^0.12.0",
     "node-pre-gyp-github": "^1.4.3"
   },
   "devDependencies": {
     "async": "^2.0.0",
-    "aws-sdk": "^2.4.8",
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.2",
-    "eslint": "1.0.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "5.9.0",
     "istanbul": "^0.4.4",
-    "mocha": "^2.2.4",
-
+    "mocha": "^5.2.0",
     "randomstring": "^1.0.5"
   },
   "bin": {
@@ -64,11 +62,11 @@
     "binding.gyp"
   ],
   "scripts": {
-    "coveralls": "coveralls < ./coverage/lcov.info",
+    "npm": "coveralls < ./coverage/lcov.info",
     "install": "node-pre-gyp install --fallback-to-build",
     "lint": "eslint .",
     "mocha": "mocha test",
-    "publish": "node-pre-gyp configure && node-pre-gyp build && node-pre-gyp package && node-pre-gyp-github publish",
+    "publish": "node-pre-gyp configure && node-pre-gyp build && node-pre-gyp package && node-pre-gyp-github publish --release",
     "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec test",
     "test": "npm run lint && npm run mocha"
   },

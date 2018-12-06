@@ -14,7 +14,7 @@ Compress gzip files 5% better compared to gzip.
 It is considerably slower than gzip (~100x) so you may want to use it only for static content and cached resources.
 
 **NOTE:** This is a fork from https://github.com/pierreinglebert/node-zopfli/ which hasn't been update in the longest
-time and cannot be installed in node 10 or later.
+time and cannot be installed in node 10 or later. Also the name of this package is `node-zopfli2`.
 
 
 ## Prerequisites for building
@@ -27,13 +27,13 @@ time and cannot be installed in node 10 or later.
 ### Install
 
 ```shell
-npm install node-zopfli
+npm install node-zopfli2
 ```
 
 or if you want zopfli binary globally
 
 ```shell
-npm install -g node-zopfli
+npm install -g node-zopfli2
 ```
 
 ### Binary (from command line)

@@ -1,3 +1,5 @@
+*.gz
+.vscode/
 /build/
 /lib/binding/
 /node_modules/
