@@ -1,3 +1,9 @@
+## v2.0.3
+
+* Update dependencies to latest version
+* Support node 8, 10, 11
+* Migrate to Azure Pipelines and automatically release on GitHub
+
 ## v2.0.2
 
 * Support Node.js v7

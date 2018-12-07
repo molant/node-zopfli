@@ -1,20 +1,16 @@
 # node-zopfli
 
 [![NPM version][npm-image]][npm-url]
-[![Linux Build Status][travis-image]][travis-url]
-[![Windows Build Status][appveyor-image]][appveyor-url]
-[![Coverage Status][coveralls-image]][coveralls-url]
+[![Build status][pipelines-image]][pipelines-url]
 [![Dependency Status][dep-image]][dep-url]
 [![devDependency Status][devDep-image]][devDep-url]
-[![Stories in Ready][waffle-image]][waffle-url]
 
 Node.js bindings for [Zopfli](https://en.wikipedia.org/wiki/Zopfli) compressing library.
 Compress gzip files 5% better compared to gzip.
 
 It is considerably slower than gzip (~100x) so you may want to use it only for static content and cached resources.
 
-**NOTE:** This is a fork from https://github.com/pierreinglebert/node-zopfli/ which hasn't been update in the longest
-time and cannot be installed in node 10 or later. Also the name of this package is `node-zopfli2`.
+**NOTE:** This is a fork from https://github.com/pierreinglebert/node-zopfli/ which hasn't been update in years and cannot be installed with the latest node versions. Also the name of this package is `zopfli-node` instead of `node-zopfli`.
 
 
 ## Prerequisites for building
@@ -27,13 +23,13 @@ time and cannot be installed in node 10 or later. Also the name of this package 
 ### Install
 
 ```shell
-npm install node-zopfli2
+npm install zopfli-node
 ```
 
 or if you want zopfli binary globally
 
 ```shell
-npm install -g node-zopfli2
+npm install -g zopfli-node
 ```
 
 ### Binary (from command line)
@@ -132,7 +128,7 @@ Maximum amount of blocks to split into (0 for unlimited, but this can give extre
 ## Build from sources
 
 ```shell
-git clone https://github.com/pierreinglebert/node-zopfli --recursive
+git clone https://github.com/molant/node-zopfli --recursive
 cd node-zopfli
 npm install
 ```
@@ -145,17 +141,11 @@ npm test
 ```
 
 
-[npm-image]: https://img.shields.io/npm/v/node-zopfli.svg
-[npm-url]: https://www.npmjs.com/package/node-zopfli
-[waffle-image]: https://badge.waffle.io/pierreinglebert/node-zopfli.svg
-[waffle-url]: https://waffle.io/pierreinglebert/node-zopfli
-[travis-image]: https://img.shields.io/travis/pierreinglebert/node-zopfli/master.svg?label=Linux%20build
-[travis-url]: https://travis-ci.org/pierreinglebert/node-zopfli
-[appveyor-image]: https://img.shields.io/appveyor/ci/pierreinglebert/node-zopfli/master.svg?label=Windows%20build
-[appveyor-url]: https://ci.appveyor.com/project/pierreinglebert/node-zopfli/branch/master
-[coveralls-image]: https://img.shields.io/coveralls/pierreinglebert/node-zopfli.svg
-[coveralls-url]: https://coveralls.io/r/pierreinglebert/node-zopfli?branch=master
-[dep-image]: https://img.shields.io/david/pierreinglebert/node-zopfli.svg
-[dep-url]: https://david-dm.org/pierreinglebert/node-zopfli
-[devDep-image]: https://img.shields.io/david/dev/pierreinglebert/node-zopfli.svg
-[devDep-url]: https://david-dm.org/pierreinglebert/node-zopfli#info=devDependencies
+[npm-image]: https://img.shields.io/npm/v/zopfli-node.svg
+[npm-url]: https://www.npmjs.com/package/zopfli-node
+[pipelines-image]: https://molant.visualstudio.com/zopfli/_apis/build/status/molant.node-zopfli
+[pipelines-url]: https://molant.visualstudio.com/zopfli/_build/latest?definitionId=3
+[dep-image]: https://img.shields.io/david/molant/node-zopfli.svg
+[dep-url]: https://david-dm.org/molant/node-zopfli
+[devDep-image]: https://img.shields.io/david/dev/molant/node-zopfli.svg
+[devDep-url]: https://david-dm.org/molant/node-zopfli#info=devDependencies

@@ -1,12 +1,13 @@
 {
-  "name": "node-zopfli2",
+  "name": "zopfli-node",
   "description": "Bindings for Zopfli compressing lib. Compress gzip files 5% better than gzip.",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Pierre Inglebert <pierre.inglebert@gmail.com>",
   "contributors": [
     "duralog <funisher@gmail.com>",
     "MayhemYDG <stepien.nicolas@gmail.com>",
-    "XhmikosR <xhmikosr@gmail.com>"
+    "XhmikosR <xhmikosr@gmail.com>",
+    "molant <amolleda@gmail.com"
   ],
   "license": "MIT",
   "keywords": [
@@ -44,7 +45,6 @@
   "devDependencies": {
     "async": "^2.0.0",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.2",
     "eslint": "5.9.0",
     "istanbul": "^0.4.4",
     "mocha": "^5.2.0",
@@ -62,7 +62,6 @@
     "binding.gyp"
   ],
   "scripts": {
-    "npm": "coveralls < ./coverage/lcov.info",
     "install": "node-pre-gyp install --fallback-to-build",
     "lint": "eslint .",
     "mocha": "mocha test",
